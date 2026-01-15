@@ -6,4 +6,4 @@ llm = OllamaLLM(
 )
 
 if __name__ == "__main__":
-    print(llm.invoke("What is weather in mumbai"))
+    print(llm.invoke("What is push pull leg?"))
