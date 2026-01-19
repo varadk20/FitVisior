@@ -21,7 +21,7 @@
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         padding: 20px;
         border-radius: 8px;
-        width: 300px;
+        width: 600px;
         overflow-y: auto;
         max-height: 400px;
       }
@@ -46,11 +46,19 @@
       .msg.user {
         background-color: lightblue;
         align-self: flex-end;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        max-width: 70%;
       }
 
       .msg.bot {
         background-color: #dff2e9;
         align-self: flex-start;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        max-width: 70%;
       }
 
       .user-input {
@@ -100,7 +108,7 @@
 
   function appendMessage(text, sender) {
     const div = document.createElement("div");
-    div.className = "msg " + sender; // sender = "user" or "bot"
+    div.className = "msg " + sender ; // sender = "user" or "bot"
     const span = document.createElement("span");
     span.textContent = text;
     div.appendChild(span);
