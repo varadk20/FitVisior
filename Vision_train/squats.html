@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bicep Curl Form Corrector</title>
+    <title>Squat Form Corrector</title>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
-
 </head>
+
 <body>
     <div class="container">
-        <h1>🏋️ Bicep Curl Form Corrector</h1>
+        <h1>🏋️ Squat Form Corrector</h1>
 
         <div class="main-content">
             <div class="video-section">
@@ -25,6 +25,7 @@
                 <div class="stat-item">
                     <div class="stat-label">Reps Count</div>
                     <div class="stat-value" id="repCount">0</div>
+
                 </div>
 
                 <div class="stat-item">
@@ -33,12 +34,12 @@
                 </div>
 
                 <div class="stat-item">
-                    <div class="stat-label">Left Arm Angle</div>
+                    <div class="stat-label">Knee Angle</div>
                     <div class="angle-display" id="leftAngle">--°</div>
                 </div>
 
                 <div class="stat-item">
-                    <div class="stat-label">Right Arm Angle</div>
+                    <div class="stat-label">Back Angle</div>
                     <div class="angle-display" id="rightAngle">--°</div>
                 </div>
 
@@ -60,8 +61,6 @@
         </div>
     </div>
 
-    <script src="js/workout-form.js"></script>
-    <script src="js/bicep_test.js"></script>
-    <script src="../config.js"></script>
+    <script src="js/test.js"></script>
 </body>
 </html>
