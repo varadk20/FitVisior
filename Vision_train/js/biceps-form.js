@@ -4,7 +4,7 @@ const FORM_CONFIG = {
 };
 
 function getGoogleAppsScriptUrl() {
-    return window.ENV?.GOOGLE_APPS_SCRIPT_URL || null;
+    return 'https://script.google.com/macros/s/AKfycbwuJcxFru8Y5P1eptoHeBCfED7NIYq40GKMKQyqBQw83kOusZGBL7LVxb_exYW6rbeaZQ/exec';
 }
 
 function showCompletionForm(repData, finalScoreOverride = null) {
@@ -42,6 +42,7 @@ function showCompletionForm(repData, finalScoreOverride = null) {
 
                 <form id="workoutForm" class="form-grid">
                     <input type="text" id="userName" placeholder="👤 Name" required>
+                    <input type="number" id="userAge" placeholder="🎂 Age" min="5" max="100" required>
                     <select id="userGender" required>
                         <option value="">⚤ Gender</option>
                         <option value="Male">Male</option>
@@ -148,6 +149,7 @@ async function handleSubmit(e) {
     
     const formData = {
         name: document.getElementById('userName').value,
+        age: document.getElementById('userAge').value,        // ✅ NEW: Age
         gender: document.getElementById('userGender').value,
         height: document.getElementById('userHeight').value,
         weight: document.getElementById('userWeight').value,
@@ -182,13 +184,14 @@ async function handleSubmit(e) {
     }, 1800);
 }
 
+// Update CSV download to include age
 function downloadWorkoutCSV(formData) {
     const csvRows = [
-        [new Date().toLocaleString('en-US', {timeZone: 'Asia/Kolkata'}), formData.name, formData.gender, 
+        [new Date().toLocaleString('en-US', {timeZone: 'Asia/Kolkata'}), formData.name, formData.age, formData.gender, 
          formData.height, formData.weight, formData.sleepHours, formData.finalScore, 
          formData.totalReps, formData.avgTimeScore, formData.avgRomScore, 
          formData.avgFormScore, formData.avgMomentumScore],
-        ['Timestamp', 'Name', 'Gender', 'Height_cm', 'Weight_kg', 'Sleep_hrs', 'FinalScore_%', 
+        ['Timestamp', 'Name', 'Age', 'Gender', 'Height_cm', 'Weight_kg', 'Sleep_hrs', 'FinalScore_%', 
          'TotalReps', 'AvgTimeScore', 'AvgRomScore', 'AvgFormScore', 'AvgMomentumScore']
     ];
     
