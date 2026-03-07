@@ -2,6 +2,9 @@ let repCount = 0;
 let stage = 'up';
 let feedback = [];
 
+
+let isFormOpen = false;
+
 let repData = [];
 let currentRepStartTime = null;
 let maxAngleThisRep = 180;
@@ -13,7 +16,7 @@ let lastLeftHipY = null;
 let lastRightHipY = null;
 let hipVelocityBuffer = [];
 
-const TARGET_REPS = 2;
+const TARGET_REPS = 10;
 
 const videoElement = document.getElementById('video');
 const canvasElement = document.getElementById('output_canvas');
@@ -215,6 +218,14 @@ function computeAndShowEfficiency() {
         efficiencyScore,
         latestSuggestions
     );
+
+    window.isFormOpen = true;
+
+    // 🔥 FORM OPENS HERE AFTER 10 REPS!
+    window.computeRepScores = computeRepScores;
+    if (typeof window.showCompletionForm === 'function') {
+        window.showCompletionForm(repData, efficiencyScore);
+    }
 }
 
 function onResults(results) {
@@ -224,6 +235,12 @@ function onResults(results) {
     canvasCtx.save();
     canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
     canvasCtx.drawImage(results.image, 0, 0, canvasElement.width, canvasElement.height);
+
+    // 🔥 ADD THESE 2 form LINES HERE:
+    if (window.isFormOpen) {
+        canvasCtx.restore();
+        return;
+    }
 
     if (results.poseLandmarks) {
         drawConnectors(canvasCtx, results.poseLandmarks, POSE_CONNECTIONS, { color: '#00B8D4', lineWidth: 4 });
