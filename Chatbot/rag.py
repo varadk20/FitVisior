@@ -3,7 +3,8 @@ import shutil
 from langchain_community.document_loaders import PyPDFLoader, TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_ollama import OllamaLLM, OllamaEmbeddings
-from langchain_community.vectorstores import Chroma
+# from langchain_community.vectorstores import Chroma
+from langchain_chroma import Chroma
 
 class RAGBot:
     def __init__(self):
@@ -12,11 +13,14 @@ class RAGBot:
         self.persist_dir = "./chroma_db"
         
         self.embeddings = OllamaEmbeddings(model=self.embedding_model)
-        self.llm = OllamaLLM(model=self.model_name)
+        self.llm = OllamaLLM(model=self.model_name, temperature=0.0)
         self.vectorstore = None
-        self._init_vectorstore()
-    
+        
     def _init_vectorstore(self):
+        """ONLY when DB exists"""
+        if not os.path.exists(self.persist_dir) or not os.path.exists(f"{self.persist_dir}/chroma.sqlite3"):
+            return
+        
         try:
             self.vectorstore = Chroma(
                 persist_directory=self.persist_dir,
@@ -32,32 +36,43 @@ class RAGBot:
         
         docs = []
         text_splitter = RecursiveCharacterTextSplitter(
-            chunk_size=800,      # Smaller for precision
-            chunk_overlap=100    # Reduced overlap
+            chunk_size=800,
+            chunk_overlap=100
         )
         
-        for filename in os.listdir(folder_path):
+        pdf_files = [f for f in os.listdir(folder_path) if f.endswith('.pdf')]
+        
+        for filename in pdf_files:  # Only process PDFs
+            print(f"  📄 Processing {filename}...")
             filepath = os.path.join(folder_path, filename)
-            if filename.endswith('.pdf'):
+            
+            try:
                 loader = PyPDFLoader(filepath)
                 raw_docs = loader.load_and_split(text_splitter)
-                # ✅ Accurate page metadata
+                
+                # Add filename metadata (no page numbers)
                 for doc in raw_docs:
-                    page_num = doc.metadata.get('page', 1)
                     doc.metadata['source'] = filename
-                    doc.metadata['page'] = page_num
-            elif filename.endswith('.txt'):
+                
+                docs.extend(raw_docs)
+                print(f"    ✅ {filename} done ({len(raw_docs)} chunks)")
+                
+            except Exception as e:
+                print(f"    ❌ {filename} failed: {e}")
+                continue
+        
+        # Handle TXT files silently (no progress print)
+        for filename in os.listdir(folder_path):
+            if filename.endswith('.txt'):
+                filepath = os.path.join(folder_path, filename)
                 loader = TextLoader(filepath, encoding='utf-8')
                 raw_docs = loader.load_and_split(text_splitter)
                 for doc in raw_docs:
                     doc.metadata['source'] = filename
-                    doc.metadata['page'] = 'N/A'
-            else:
-                continue
-            
-            docs.extend(raw_docs)
+                docs.extend(raw_docs)
         
         return docs
+    
     
     def ingest_documents(self, folder_path="documents"):
         docs = self.load_documents(folder_path)
@@ -70,21 +85,7 @@ class RAGBot:
             try:
                 shutil.rmtree(self.persist_dir, ignore_errors=True)
             except:
-                for root, dirs, files in os.walk(self.persist_dir, topdown=False):
-                    for file in files:
-                        try:
-                            os.remove(os.path.join(root, file))
-                        except:
-                            pass
-                    for dir in dirs:
-                        try:
-                            os.rmdir(os.path.join(root, dir))
-                        except:
-                            pass
-                try:
-                    os.rmdir(self.persist_dir)
-                except:
-                    pass
+                pass
         
         self.vectorstore = Chroma.from_documents(
             documents=docs,
@@ -113,18 +114,18 @@ Answer:"""
         
         response = self.llm.invoke(prompt)
         
-        # ✅ UNIQUE sources only (no duplicates)
+        # ✅ NO PAGE NUMBERS - just unique filenames
         seen_sources = set()
         unique_sources = []
         for doc in relevant_docs:
-            source_key = f"{doc.metadata.get('source')}-{doc.metadata.get('page')}"
-            if source_key not in seen_sources:
-                seen_sources.add(source_key)
+            source_name = doc.metadata.get('source', 'Unknown')
+            if source_name not in seen_sources:
+                seen_sources.add(source_name)
                 unique_sources.append(doc)
         
         sources = [
-            f"📄 {doc.metadata.get('source', 'Unknown')} (Page {doc.metadata.get('page', 'N/A')})"
-            for doc in unique_sources[:3]  # Top 3 unique sources
+            f"📄 {doc.metadata.get('source', 'Unknown')}"
+            for doc in unique_sources[:3]
         ]
         
         return {

@@ -7,7 +7,10 @@ st.set_page_config(page_title="Local RAG Chatbot", page_icon="🤖", layout="wid
 
 @st.cache_resource
 def load_ragbot():
-    return RAGBot()
+    # DON'T init vectorstore - just create RAGBot without loading
+    bot = RAGBot()
+    bot.vectorstore = None  # Prevent any DB loading
+    return bot
 
 def initialize_session():
     if "ragbot" not in st.session_state:
@@ -16,6 +19,8 @@ def initialize_session():
         st.session_state.messages = []
     if "rag_ready" not in st.session_state:
         st.session_state.rag_ready = False
+    if "db_exists" not in st.session_state:
+        st.session_state.db_exists = os.path.exists("./chroma_db") and os.path.exists("./chroma_db/chroma.sqlite3")
 
 def display_chat_history():
     for message in st.session_state.messages:
@@ -35,12 +40,21 @@ def add_message(role, content, sources=None):
 def main():
     initialize_session()
     
+    # ✅ NO AUTO-INGEST - JUST CHECK EXISTING DB
     if not st.session_state.rag_ready:
-        with st.spinner("🔄 Auto-loading documents from `documents/` folder..."):
-            result = st.session_state.ragbot.ingest_documents()
-            st.session_state.rag_ready = True
-            st.success(result)
-            st.rerun()
+        if st.session_state.db_exists:
+            # Load existing DB (no folder creation)
+            st.session_state.ragbot._init_vectorstore()
+            if st.session_state.ragbot.vectorstore:
+                st.session_state.rag_ready = True
+                st.success("✅ Loaded existing vectorstore")
+            else:
+                st.error("❌ Corrupted vectorstore. Run ingest.py")
+                st.stop()
+        else:
+            st.warning("⚠️ No vectorstore found")
+            st.info("**Run first:** `python ingest.py`")
+            st.stop()
     
     st.title("🤖 Local Fitness RAG Chatbot")
     st.markdown("**Powered by Ollama + ChromaDB**. Drop PDFs in `documents/` folder.")
@@ -64,12 +78,13 @@ def main():
                 shutil.rmtree("./chroma_db", ignore_errors=True)
             st.session_state.rag_ready = False
             st.session_state.messages = []
+            st.session_state.db_exists = False
             st.rerun()
     
     display_chat_history()
     
     if st.session_state.rag_ready:
-        if prompt := st.chat_input("💪 Ask about your fitness documents..."):
+        if prompt := st.chat_input("Ask your fitness queries.."):
             # ✅ ADD USER MESSAGE FIRST
             with st.chat_message("user"):
                 st.markdown(prompt)

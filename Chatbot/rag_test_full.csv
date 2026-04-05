@@ -1,0 +1,93 @@
+question,expected,score,q_a_sim,a_e_sim,latency
+Do you need supplements to build muscle?...,Supplements are not required for muscle growth if diet and training are adequate.,0.834,0.818,0.845,31.5
+Creatine benefits for strength training?...,"Creatine supplementation can improve strength, power output, and training performance.",0.909,0.874,0.932,55.8
+How much water should athletes drink?...,Athletes should maintain hydration and drink enough water to replace sweat losses during exercise.,0.871,0.841,0.891,44.7
+Can you build muscle with bodyweight exercises?...,Yes muscle hypertrophy can occur with bodyweight exercises when progressive overload and sufficient effort are applied.,0.864,0.925,0.822,41.8
+Calisthenics training for obesity intervention?...,Bodyweight exercise programs can improve body composition and metabolic health in overweight individuals.,0.778,0.843,0.735,34.9
+Progressive push up training effects?...,Progressively increasing push up difficulty improves upper body strength and muscular endurance.,0.77,0.758,0.777,44
+Bodyweight training benefits?...,Bodyweight training improves strength mobility coordination and requires minimal equipment.,0.866,0.845,0.881,39.5
+Resistance training adaptations in women?...,Women experience similar relative increases in strength and muscle size from resistance training as men.,0.827,0.835,0.822,64
+Sex differences in muscle hypertrophy?...,While men typically gain more absolute muscle mass women achieve similar relative hypertrophy percentages.,0.855,0.874,0.842,48.5
+Menstrual cycle effects on strength?...,Some research suggests strength may be slightly higher during the follicular phase compared to the luteal phase.,0.78,0.802,0.765,58.1
+How does gym training benefit mental health?...,Regular exercise reduces symptoms of depression and anxiety while improving mood and self-esteem.,0.817,0.869,0.783,60.8
+Exercise vs antidepressants for depression?...,Exercise can be as effective as medication for mild to moderate depression.,0.834,0.817,0.846,117.9
+Resistance training effects on stress?...,Strength training reduces cortisol levels and improves psychological resilience.,0.764,0.787,0.748,56.2
+Yoga effects on stress reduction?...,Yoga activates the parasympathetic nervous system which helps reduce stress and anxiety.,0.875,0.859,0.885,56.2
+Health benefits of physical activity?...,Regular physical activity reduces risk of cardiovascular disease diabetes obesity and premature death.,0.859,0.835,0.875,73.7
+Exercise recommendations for longevity?...,Adults should perform at least 150 minutes of moderate aerobic exercise plus strength training twice weekly.,0.694,0.782,0.636,56.4
+Exercise benefits for cardiovascular health?...,Exercise improves blood pressure cholesterol levels and overall heart function.,0.841,0.86,0.829,143.3
+Exercise effects on immune system?...,Moderate exercise strengthens immune function and reduces inflammation.,0.828,0.853,0.811,59.2
+Eccentric vs concentric training hypertrophy?...,Eccentric muscle actions may produce slightly greater hypertrophy due to higher mechanical tension.,0.858,0.892,0.835,58.1
+Training to failure necessary for growth?...,Training to absolute failure is not necessary; stopping one or two repetitions before failure can produce similar gains.,0.781,0.835,0.745,22.6
+Blood flow restriction training benefits?...,Blood flow restriction training allows muscle growth using lighter loads by restricting venous blood flow.,0.814,0.796,0.827,94.6
+Drop sets effectiveness?...,Drop sets increase metabolic stress and can be useful for hypertrophy.,0.769,0.715,0.805,43.9
+Supersets benefits?...,Supersets reduce workout time and increase metabolic stress while maintaining training volume.,0.82,0.771,0.853,35.4
+Principles of strength training?...,The main principles are specificity overload progression and recovery.,0.818,0.856,0.792,40.4
+What is one repetition maximum?...,One repetition maximum is the maximum load a person can lift for one complete repetition of an exercise.,0.868,0.831,0.892,26.2
+What determines muscular strength?...,Strength is influenced by muscle size neural adaptations and biomechanical factors.,0.842,0.874,0.822,49.5
+How long does it take to build muscle?...,Noticeable muscle growth typically occurs after several weeks of consistent resistance training.,0.821,0.788,0.843,34
+Can cardio interfere with hypertrophy?...,Excessive endurance training may interfere with muscle growth if recovery and nutrition are insufficient.,0.687,0.778,0.626,22.3
+Best exercises for overall fitness?...,Compound movements such as squats deadlifts presses and pull ups provide the most overall benefit.,0.811,0.865,0.776,42.1
+What is HIIT training?...,High intensity interval training alternates short bursts of intense exercise with recovery periods.,0.795,0.806,0.788,39.5
+Benefits of HIIT workouts?...,HIIT improves cardiovascular fitness burns calories efficiently and enhances metabolic health.,0.845,0.862,0.834,51.5
+Resistance training for older adults?...,Older adults benefit from strength training two to three times weekly to maintain muscle mass and mobility.,0.814,0.838,0.798,60.6
+Minimal dose strength training?...,Even one set of resistance exercise performed twice weekly can improve strength in beginners.,0.79,0.857,0.746,29
+Exercise for stress management?...,Regular exercise reduces perceived stress and improves emotional wellbeing.,0.872,0.888,0.862,25
+How exercise improves discipline?...,Consistent training builds habits goal setting and self control.,0.789,0.849,0.749,35.4
+Why exercise improves sleep?...,Exercise helps regulate circadian rhythms and improves sleep quality.,0.875,0.875,0.874,47.8
+Muscle protein synthesis meaning?...,It is the process where the body builds new muscle proteins after resistance training and protein intake.,0.862,0.871,0.856,26.6
+Metabolic stress in hypertrophy?...,Metabolic stress refers to the buildup of metabolites during exercise which contributes to muscle growth.,0.854,0.848,0.857,54.6
+Mechanical tension role in hypertrophy?...,Mechanical tension generated during resistance training is the primary stimulus for muscle growth.,0.795,0.788,0.8,60.5
+What causes muscle soreness?...,Delayed onset muscle soreness occurs due to microscopic muscle damage from unfamiliar or intense exercise.,0.833,0.801,0.854,42.6
+Importance of warm up before lifting?...,A proper warm up increases blood flow activates muscles and reduces injury risk.,0.861,0.875,0.852,46
+Why cool down after exercise?...,Cooling down gradually lowers heart rate and aids recovery after intense exercise.,0.89,0.868,0.904,38.4
+How long should a hypertrophy workout last?...,Most hypertrophy workouts last between 45 and 75 minutes depending on training volume and rest intervals.,0.789,0.752,0.813,31.3
+Is lifting fast or slow better for muscle growth?...,Controlled lifting with a moderate tempo helps maintain tension on the muscle and improves hypertrophy stimulus.,0.815,0.905,0.755,37.8
+What is time under tension in resistance training?...,Time under tension refers to how long a muscle remains under load during a set which can influence hypertrophy.,0.81,0.877,0.765,24.8
+Are compound exercises better than isolation exerc...,Compound exercises recruit multiple muscle groups and allow heavier loading while isolation exercises target specific muscles.,0.902,0.928,0.884,36.3
+How many exercises per muscle group are recommende...,Most programs include 2–4 exercises per muscle group depending on training volume and goals.,0.838,0.855,0.827,36.1
+What is the role of mind muscle connection?...,Mind muscle connection involves consciously focusing on the target muscle during an exercise to improve activation.,0.921,0.876,0.95,26.1
+Can beginners gain muscle quickly?...,Beginners often experience rapid strength and muscle gains due to neural adaptations and initial training response.,0.783,0.801,0.771,29.4
+What is neuromuscular adaptation?...,Neuromuscular adaptation refers to improvements in the nervous system's ability to recruit muscle fibers efficiently.,0.939,0.907,0.96,29.7
+Why are compound lifts important?...,Compound lifts such as squats and deadlifts stimulate large muscle groups and promote overall strength development.,0.888,0.885,0.889,25.7
+What is progressive resistance training?...,Progressive resistance training involves gradually increasing the load or difficulty of exercises over time.,0.87,0.86,0.877,37.3
+Does stretching help muscle recovery?...,Light stretching may help reduce stiffness and improve flexibility after training sessions.,0.836,0.932,0.772,24.3
+Dynamic vs static stretching before workouts?...,Dynamic stretching is recommended before workouts because it increases blood flow and prepares muscles for movement.,0.868,0.86,0.873,39
+Is it safe to train the same muscle every day?...,Training the same muscle daily can increase injury risk unless volume and intensity are carefully managed.,0.753,0.781,0.734,20.4
+What is overtraining syndrome?...,Overtraining occurs when excessive training stress without adequate recovery leads to fatigue and decreased performance.,0.867,0.866,0.867,33.2
+How does resistance training improve bone density?...,Strength training places stress on bones which stimulates bone remodeling and increases bone mineral density.,0.897,0.919,0.882,35.7
+Can resistance training help with fat loss?...,Resistance training increases muscle mass and metabolic rate which supports fat loss.,0.849,0.884,0.825,31.4
+What is metabolic conditioning?...,Metabolic conditioning combines strength and cardiovascular exercises to improve energy system efficiency.,0.804,0.868,0.762,34.6
+How many reps are best for muscular endurance?...,Muscular endurance training typically uses higher repetitions such as 15–20 reps with lighter loads.,0.859,0.832,0.877,37.9
+How many reps are best for maximal strength?...,Maximal strength training usually involves 1–5 repetitions using heavy loads above 85 percent of 1RM.,0.799,0.779,0.812,30
+What is periodization in training?...,Periodization is the systematic planning of training variables to maximize performance and prevent plateaus.,0.904,0.896,0.909,49.2
+Linear vs nonlinear periodization?...,Linear periodization gradually increases intensity over time while nonlinear periodization varies intensity more frequently.,0.828,0.816,0.836,78.9
+What is active recovery?...,Active recovery involves low intensity movement such as walking or light cycling to promote blood flow and recovery.,0.884,0.813,0.931,31.4
+How does exercise improve metabolism?...,Exercise increases energy expenditure and improves metabolic processes such as glucose regulation.,0.857,0.852,0.86,43.1
+What is basal metabolic rate?...,Basal metabolic rate is the number of calories the body burns at rest to maintain basic physiological functions.,0.802,0.801,0.803,41.1
+Why is consistency important in fitness?...,Consistent training over time is the most important factor for long term strength and muscle development.,0.831,0.897,0.787,43.5
+What role do hormones play in muscle growth?...,Hormones such as testosterone growth hormone and insulin-like growth factor support muscle protein synthesis.,0.808,0.818,0.802,61
+What is muscle fatigue?...,Muscle fatigue is the temporary reduction in muscle force production after intense or prolonged activity.,0.878,0.87,0.883,59.9
+How do muscles grow after training?...,Muscles grow through a process where damaged fibers repair and increase in size after resistance training.,0.865,0.83,0.888,32
+What is lactic acid during exercise?...,Lactate is a byproduct of anaerobic metabolism produced during high intensity exercise.,0.868,0.876,0.862,26.9
+How does resistance training affect posture?...,Strengthening core and back muscles can improve posture and reduce musculoskeletal imbalances.,0.696,0.778,0.642,21.9
+What are stabilizer muscles?...,Stabilizer muscles assist in maintaining joint stability during movement and resistance exercises.,0.87,0.867,0.872,28.8
+What is functional training?...,Functional training focuses on exercises that improve everyday movement patterns and coordination.,0.884,0.838,0.915,38.5
+How do resistance bands help training?...,Resistance bands provide variable resistance and are useful for strength training and rehabilitation.,0.903,0.909,0.899,43
+What is training plateau?...,A plateau occurs when progress in strength or muscle growth stops due to adaptation to the current training stimulus.,0.91,0.894,0.92,23.6
+How can you overcome a training plateau?...,Plateaus can be overcome by changing training variables such as intensity volume or exercise selection.,0.907,0.871,0.931,32.1
+Why are rest days important?...,Rest days allow muscles to repair recover and adapt after intense training sessions.,0.864,0.824,0.892,38.2
+Can strength training improve balance?...,Resistance training strengthens stabilizing muscles which helps improve balance and coordination.,0.852,0.906,0.817,35.6
+What is muscular endurance?...,Muscular endurance is the ability of a muscle to perform repeated contractions over time.,0.938,0.898,0.965,32.5
+What is power in exercise science?...,Power is the ability to generate force quickly and is important in explosive movements.,0.836,0.88,0.807,34.2
+Examples of power exercises?...,Exercises such as box jumps Olympic lifts and medicine ball throws develop muscular power.,0.825,0.888,0.783,34.2
+Why is core strength important?...,Strong core muscles support spinal stability and improve overall athletic performance.,0.828,0.84,0.819,52.6
+What muscles make up the core?...,The core includes abdominal muscles lower back muscles obliques and hip stabilizers.,0.822,0.856,0.799,29.9
+Can strength training reduce injury risk?...,Strength training improves joint stability muscle balance and resilience against injury.,0.901,0.944,0.872,23.1
+What is exercise adherence?...,Exercise adherence refers to the ability to consistently follow a workout program over time.,0.825,0.823,0.825,38.6
+What are mobility exercises?...,Mobility exercises improve joint range of motion and movement quality.,0.856,0.889,0.834,36.2
+How does exercise affect brain health?...,Exercise increases blood flow to the brain and promotes neuroplasticity and cognitive function.,0.882,0.881,0.882,49.8
+What is delayed onset muscle soreness?...,It is muscle pain that occurs 24–48 hours after unfamiliar or intense exercise.,0.821,0.85,0.802,33.2
+Why do beginners experience soreness more often?...,Beginners experience more soreness because their muscles are not yet adapted to resistance training stress.,0.905,0.879,0.923,30.1
+,,,,,
+Can regular exercise improve energy levels?...,Regular exercise improves cardiovascular efficiency and overall energy levels throughout the day.,0.873,0.918,0.844,41.8
