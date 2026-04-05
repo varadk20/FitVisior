@@ -1,0 +1,31 @@
+question,expected,score,q_a_sim,a_e_sim,latency
+What is the optimal rep range for muscle hypertrop...,Muscle hypertrophy is commonly achieved using 6–12 repetitions per set with moderate to heavy loads around 70–85% of one-repetition maximum (1RM).,0.846,0.874,0.827,111.3
+How many sets per muscle group per week for optima...,Research suggests performing roughly 10–20 total sets per muscle group per week to maximize hypertrophy depending on training experience.,0.902,0.902,0.901,79.8
+Does training frequency affect muscle hypertrophy?...,Higher training frequency can improve hypertrophy when total training volume is equated because it distributes workload and improves recovery.,0.881,0.921,0.854,89.5
+What are the effects of 2 vs 3 vs 4 days resistanc...,Training 3–4 days per week typically allows sufficient volume and recovery for most individuals compared with fewer weekly sessions.,0.785,0.815,0.765,71.9
+Full body vs split routine which is better for hyp...,"Both full body and split routines produce similar hypertrophy when total volume is equal, although beginners often benefit from full body routines.",0.787,0.768,0.8,43.2
+Loading recommendations for muscle hypertrophy?...,Loads between 60–85% of one-repetition maximum are commonly recommended for maximizing muscle hypertrophy.,0.767,0.757,0.774,55.3
+High load vs low load resistance training for hype...,Low load training can produce similar hypertrophy to high load training if sets are performed close to muscular failure.,0.838,0.849,0.831,47.1
+Resistance training variables for optimizing hyper...,"The key variables are training volume, intensity, frequency, rest intervals, and progressive overload.",0.771,0.817,0.74,70.3
+How does progressive overload work in resistance t...,"Progressive overload involves gradually increasing weight, repetitions, or training volume over time to continually stimulate muscle adaptation.",0.925,0.913,0.933,57.5
+What is the dose response relationship for muscle ...,Muscle growth generally increases with higher training volume up to about 20 weekly sets per muscle group.,0.843,0.838,0.845,120.1
+What is PPL training split?...,"Push Pull Legs is a training split dividing workouts into pushing movements, pulling movements, and leg exercises usually performed over a 6-day cycle.",0.856,0.838,0.868,101.2
+Push pull legs vs upper lower split?...,Push pull legs allows higher specialization while upper lower splits provide better recovery for many lifters.,0.814,0.772,0.842,154.9
+Full body vs split body training effectiveness?...,When weekly volume is equal both full body and split training produce similar hypertrophy outcomes.,0.799,0.838,0.774,39.9
+Split vs full body for beginners?...,Full body routines are generally better for beginners because they train each muscle multiple times per week.,0.833,0.833,0.833,44.9
+Training splits for optimizing efficiency?...,Full body workouts are typically the most time-efficient way to train the entire body in fewer sessions.,0.8,0.874,0.75,33.7
+6 day PPL split pros and cons?...,A six-day push pull legs split allows high training frequency but may increase fatigue if recovery is insufficient.,0.839,0.805,0.862,81.8
+Upper lower split frequency recommendations?...,Upper lower splits are commonly performed four days per week with two upper body and two lower body sessions.,0.743,0.747,0.741,31.8
+Bro split effectiveness for hypertrophy?...,Bro splits train each muscle only once per week which may be less effective than higher frequency programs.,0.773,0.818,0.743,32.3
+How to structure a 4 day training split?...,A common structure is upper body lower body repeated twice per week.,0.702,0.854,0.6,77.6
+Best rest interval between hypertrophy sets?...,Rest periods of about 60–120 seconds allow sufficient recovery while maintaining metabolic stress during hypertrophy training.,0.809,0.826,0.798,50.8
+How much sleep is needed for muscle recovery?...,Most adults require around 7–9 hours of quality sleep each night to support muscle recovery and hormone regulation.,0.915,0.903,0.922,27.1
+Should you train through muscle soreness?...,"Mild delayed onset muscle soreness is normal, but severe pain or joint discomfort is a sign to allow additional recovery.",0.813,0.869,0.775,32.9
+How often should beginners train?...,Beginners typically benefit from resistance training 2–3 times per week focusing on full body workouts.,0.856,0.82,0.88,21.3
+How often should intermediate lifters train?...,Intermediate lifters commonly train 3–5 days per week depending on training volume and recovery ability.,0.774,0.779,0.771,41.5
+Why is recovery important for muscle growth?...,Muscle growth occurs during recovery when damaged muscle fibers repair and adapt to training stress.,0.894,0.882,0.902,36.8
+What is a deload week?...,A deload week involves temporarily reducing training volume or intensity to allow recovery and prevent overtraining.,0.734,0.82,0.677,16.8
+Deload frequency for intermediate lifters?...,Intermediate lifters often schedule a deload every 4–6 weeks depending on fatigue levels.,0.806,0.843,0.781,34.7
+Protein intake recommendations for hypertrophy?...,A daily protein intake of approximately 1.6–2.2 grams per kilogram of body weight supports muscle growth.,0.771,0.744,0.789,47.8
+Why is protein important for muscle building?...,Protein provides amino acids necessary for muscle protein synthesis and recovery after resistance training.,0.83,0.842,0.822,55.5
+Carb timing around resistance training?...,Consuming carbohydrates before and after workouts helps support training performance and glycogen replenishment.,0.712,0.809,0.647,24.6

@@ -1,7 +1,0 @@
-streamlit==1.38.0
-ollama==0.3.3
-chromadb==0.5.5
-sentence-transformers==3.1.1
-pypdf2==3.0.1
-langchain-community==0.3.2
-langchain-ollama==0.2.2
